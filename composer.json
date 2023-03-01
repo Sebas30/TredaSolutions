@@ -1,0 +1,20 @@
+{
+    "name": "vendor/project-name",
+    "description": "TREDA SOLUTIONS",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sebastian Alvarez Barona",
+            "email": "alvarezbaronasebastian@hotmail.com"
+        }
+    ],
+    "require": {
+
+    },
+    "autoload":{
+        "psr-4":{
+            "treda\\":"functions/"
+        }
+    }
+}
