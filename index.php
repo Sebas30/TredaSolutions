@@ -131,6 +131,19 @@ function invertirCadena($cadena)
                     </div>
                 </div>
             </div>
+            <div class="col-sm-4"><br>
+                <div class="card shadow mb-3" style="width: 25rem;">
+                    <div class="card-header">
+                        <h4>CRUD</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="text-center mb-3">
+                            <img src="pruebaSQL/reporte2.png" width="200" class="rounded" alt="reporte 2">
+                        </div>
+                        <a href="CRUD" class="btn btn-primary mb-2 text-white" download>visualizar crud</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
