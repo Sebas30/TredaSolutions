@@ -44,7 +44,7 @@ class productos
 
     public function mostrarProductos()
     {
-        $sql = "SELECT imagen, nombreT, nombreP, SKU, DescrP, valor, estado FROM productos";
+        $sql = "SELECT id,imagen, nombreT, nombreP, SKU, DescrP, valor, estado FROM productos";
         $resultado = $this->cn->prepare($sql);
 
         if ($resultado->execute())
@@ -52,7 +52,63 @@ class productos
      
         return false;
     }
+
+    public function mostrarPorId($id)
+    {
+        $sql = "SELECT * FROM productos WHERE id=:id";
+        $resultado = $this->cn->prepare($sql);
+        $_array = array(
+
+            ":id" => $id
+        );
+        if ($resultado->execute($_array))
+            return $resultado->fetch();
+
+
+        return false;
+    }
+
+    public function actualizarproductos($_params)
+    {
+        $sql = "UPDATE productos SET imagen=:imagen,nombreT=:nombreT,nombreP=:nombreP,SKU=:SKU,DescrP=:DescrP,valor=:valor WHERE id=:id";
+
+        $resultado = $this->cn->prepare($sql);
+
+        $_array = array(
+            ":imagen" => $_params['imagen'], 
+            ":nombreT" => $_params['nombreT'],
+            ":nombreP" => $_params['nombreP'],
+            ":SKU" => $_params['SKU'],
+            ":DescrP" => $_params['DescrP'],
+            ":valor" => $_params['valor'],
+            ":id" => $_params['id'],
+        );
+
+        if ($resultado->execute($_array))
+            return true;
+
+
+        return false;
+    }
+
+    public function eliminarProducto($id)
+    {
+        $sql = "DELETE FROM productos WHERE id=:id ";
+        $resultado = $this->cn->prepare($sql);
+
+        $_array = array(
+
+            ":id" => $id
+        );
+
+        if ($resultado->execute($_array))
+            return true;
+
+
+        return false;
+    }
 }
+
 
 
 ?>
