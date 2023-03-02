@@ -10,7 +10,8 @@
 
     <link rel="stylesheet" href="../assets/css/stylesCrud.css">
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.9/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
 
     <title>CRUD PHP - TREDA SOLUTIONS</title>
@@ -56,7 +57,7 @@
                             <div class="form-row mb-3">
                                 <div class="form-group col-md-6">
                                     <label for="inputEmail4">Imagen</label>
-                                    <input type="file" class="form-control-file" name="foto" id="foto" >
+                                    <input type="file" value="" class="form-control-file" name="foto" id="foto" required>
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="inputEmail4">Nombre de tienda</label>
