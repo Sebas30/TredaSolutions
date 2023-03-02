@@ -32,7 +32,13 @@
             <a href="#" data-toggle="modal" data-target="#exampleModal" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z" />
                 </svg> Agregar tienda</a>
+
+            <a href="../index.php" class="d-none d-sm-inline-block btn btn-sm btn-info shadow-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+                    <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z" />
+                </svg> Regresar a los ejercicios</a>
         </div>
+
+
 
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -52,25 +58,25 @@
                         </div>
                         <form action="accionesP.php" method="POST" class="form-inline" enctype="multipart/form-data">
                             <div class="form-row mb-3">
-                            <div class="form-group col-md-6">
+                                <div class="form-group col-md-6">
                                     <label for="inputEmail4">Fecha de apertura</label>
                                     <input type="date" class="form-control" name="fecha" id="fecha">
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="inputEmail4">Nombre de tienda</label>
-                                    <input type="text" class="form-control" name="nombreT" id="nombreT" >
+                                    <input type="text" class="form-control" name="nombreT" id="nombreT">
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="exampleFormControlTextarea1">Nombre producto</label>
-                                    <input type="text" class="form-control" name="nombreP" id="nombreP" >
+                                    <input type="text" class="form-control" name="nombreP" id="nombreP">
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="inputEmail4">Codigo SKU</label>
-                                    <input type="text" class="form-control" name="SKU" id="codSKU" >
+                                    <input type="text" class="form-control" name="SKU" id="codSKU">
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="inputEmail4">Descripcion del producto</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="DescrP" id="DescrP" maxlength="40" ></textarea>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="DescrP" id="DescrP" maxlength="40"></textarea>
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="inputEmail4">Valor</label>

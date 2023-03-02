@@ -138,9 +138,9 @@ function invertirCadena($cadena)
                     </div>
                     <div class="card-body">
                         <div class="text-center mb-3">
-                            <img src="pruebaSQL/reporte2.png" width="200" class="rounded" alt="reporte 2">
+                            <img src="assets/images/crud treda.png" width="200" class="rounded" alt="reporte 2">
                         </div>
-                        <a href="CRUD" class="btn btn-primary mb-2 text-white" download>visualizar crud</a>
+                        <a href="crud" class="btn btn-primary mb-2 text-white" target="_blank">visualizar crud</a>
                     </div>
                 </div>
             </div>
