@@ -8,6 +8,9 @@ if($_SERVER['REQUEST_METHOD'] ==='POST')
 {
     if($_POST['accion']==='Agregar'){
 
+        if(empty($_POST['fecha']))
+            exit("<script>alert('¡El campo fecha de apertura no puede estar vacio!');</script><script>window.location.href='index.php';</script>");
+
         if(empty($_POST['nombreT']))
             exit("<script>alert('¡El campo nombre de tienda no puede estar vacio!');</script><script>window.location.href='index.php';</script>");
 
@@ -45,12 +48,13 @@ if($_SERVER['REQUEST_METHOD'] ==='POST')
         exit("<script>alert('¡El campo valor no puede contener letras!');</script><script>window.location.href='index.php';</script>");
 
         $_params = array(
+            'fecha'=>$_POST['fecha'],
             'imagen'=> SubirFoto(),
             'nombreT'=>$_POST['nombreT'],
             'nombreP'=>$_POST['nombreP'],
             'SKU'=>$_POST['SKU'],
             'DescrP'=>$_POST['DescrP'],
-            'valor' => $_POST['valor']
+            'valor' => $_POST['valor'],
 
         );
 

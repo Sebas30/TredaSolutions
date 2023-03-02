@@ -1,3 +1,5 @@
+CREATE DATABASE prueba_sql;
+
 CREATE TABLE persona (
   cc varchar(20) NOT NULL,
   nombre varchar(255)  NOT NULL,

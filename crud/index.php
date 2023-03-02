@@ -52,9 +52,9 @@
                         </div>
                         <form action="accionesP.php" method="POST" class="form-inline" enctype="multipart/form-data">
                             <div class="form-row mb-3">
-                                <div class="form-group col-md-6">
-                                    <label for="inputEmail4">Imagen</label>
-                                    <input type="file" value="" class="form-control-file" name="foto" id="foto" required>
+                            <div class="form-group col-md-6">
+                                    <label for="inputEmail4">Fecha de apertura</label>
+                                    <input type="date" class="form-control" name="fecha" id="fecha">
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="inputEmail4">Nombre de tienda</label>
@@ -71,11 +71,14 @@
                                 <div class="form-group col-md-6">
                                     <label for="inputEmail4">Descripcion del producto</label>
                                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="DescrP" id="DescrP" maxlength="40" ></textarea>
-
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="inputEmail4">Valor</label>
                                     <input type="text" class="form-control" name="valor" id="valor">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputEmail4">Imagen</label>
+                                    <input type="file" value="" class="form-control-file" name="foto" id="foto" required>
                                 </div>
                             </div>
                             <input type="submit" class="btn btn-info btn-block m-0 font-weight-bold" name="accion" value="Agregar">
@@ -151,7 +154,7 @@
                                                     if ($item['estado'] == 'on') {
                                                     ?>
                                                         <p class="badge badge-success badge-success-alt">
-                                                            Tienda activa
+                                                            Tienda activa desde <?php print $item['fecha_tienda'] ?>
                                                         </p>
                                                     <?php
                                                     } else {

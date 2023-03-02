@@ -20,13 +20,14 @@ class productos
 
     public function registrarProducto($_params)
     {
-        $sql = "INSERT INTO productos (imagen, nombreT, nombreP, SKU, DescrP, valor) 
-        VALUES (:imagen,:nombreT,:nombreP,:SKU,:DescrP,:valor)";
+        $sql = "INSERT INTO productos (fecha,imagen, nombreT, nombreP, SKU, DescrP, valor) 
+        VALUES (:fecha,:imagen,:nombreT,:nombreP,:SKU,:DescrP,:valor)";
 
         $resultado = $this->cn->prepare($sql);
 
 
         $_array = array(
+            ":fecha" => $_params['fecha'],
             ":imagen" => $_params['imagen'], 
             ":nombreT" => $_params['nombreT'],
             ":nombreP" => $_params['nombreP'],
@@ -44,7 +45,7 @@ class productos
 
     public function mostrarProductos()
     {
-        $sql = "SELECT id,imagen, nombreT, nombreP, SKU, DescrP, valor, estado FROM productos";
+        $sql = "SELECT id,fecha_tienda,imagen, nombreT, nombreP, SKU, DescrP, valor, estado FROM productos";
         $resultado = $this->cn->prepare($sql);
 
         if ($resultado->execute())

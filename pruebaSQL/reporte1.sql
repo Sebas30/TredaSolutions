@@ -1,4 +1,4 @@
-create database prueba_sql;
+CREATE DATABASE prueba_sql;
 
 CREATE TABLE clientes (
   id int(6) NOT NULL AUTO_INCREMENT,
